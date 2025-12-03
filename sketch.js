@@ -6,6 +6,7 @@ let clockBreedCD = 500;
 let clockFoodCD = 10;
 let currInput = "";
 let allowTraits = false;
+let offset = 1037;
 
 function setup() {
   frameRate(200);
@@ -33,19 +34,19 @@ function setup() {
   //console.log(gameFood)
   
   let button = createButton('add fish');
-  button.position(0, height - 40);
+  button.position(450, offset - 20);
   button.mousePressed(addFish);
   
   let allowButton = createButton('allow traits');
-  allowButton.position(250, height - 20);
+  allowButton.position(675,offset);
   allowButton.mousePressed(toggleAllowTraits);
   
   let clearbutton = createButton('clear');
-  clearbutton.position(400, height - 20);
+  clearbutton.position(850, offset);
   clearbutton.mousePressed(wipe);
   
   inputbox = createInput('');
-  inputbox.position(0, height - 20);
+  inputbox.position(450,offset);
 
   // Call repaint() when input is detected.
   inputbox.input(updateCurrInput);
@@ -122,7 +123,7 @@ function displayHUD(){
   else{
       fill(200,0,0)
   }
-  square(340,height -20,20)
+  square(340,height -29,20)
 }
 
 

@@ -1,7 +1,23 @@
 html, body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
 }
+
 canvas {
   display: block;
+  margin: 20px auto;
+}
+
+.title, .subheader, .description {
+  text-align: center;
+}
+
+.subheader {
+  margin-top: -10px;     /* tighten spacing with the title */
+  font-size: 1.3rem;
+  color: #555;           /* optional subtle styling */
 }
