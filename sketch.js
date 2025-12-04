@@ -6,7 +6,7 @@ let clockBreedCD = 500;
 let clockFoodCD = 10;
 let currInput = "";
 let allowTraits = false;
-let offset = 1037;
+let offset = 1067;
 
 function setup() {
   frameRate(200);

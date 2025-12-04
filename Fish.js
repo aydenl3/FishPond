@@ -101,7 +101,7 @@ class Fish{
   decode(dna){
     for (let letter of dna){
       //flee
-      if(letter == "f"){
+      if(letter == "f" || letter == "F"){
         let threat = this.seekFish();
         if(threat != null){
           if(threat.size >= this.size){
@@ -114,13 +114,13 @@ class Fish{
         }
       }
       //wander
-      else if(letter == "w"){
+      else if(letter == "w" || letter == "W"){
         this.state = "w";
         this.wander();
         break;
       }
       //migrate
-      else if(letter == "m"){
+      else if(letter == "m"|| letter == "M"){
         this.state = "m"
         if(abs(this.x - this.goal.x) >= 10 || abs(this.y - this.goal.y) >= 10){
           this.migrate(this.goal);
@@ -131,7 +131,7 @@ class Fish{
         }break;
       }
       //hunt
-      if(letter == "h"){
+      if(letter == "h"|| letter == "H"){
         let prey = this.seekFish();
         if(prey != null){
           if(prey.size < this.size){
